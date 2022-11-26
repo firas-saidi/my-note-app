@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 5px 0px 0px 0px;
+  scroll-behavior: smooth;
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+
+
+}
+.container{
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+    min-height : 100vh;
+
+}
+.note.new{
+  background-color: #3ddee4;
+}
+textarea{
+  border:none;
+  resize: none;
+  background-color: #3ddee4;
+}
+textarea:focus{
+  outline: none
+}
+.save{
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+
+}
+.save:hover{
+  background-color: red;
+  cursor: pointer;
+}
+.note{
+
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+
+}
+.notes-list{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(250px , 1fr));
+}
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon{
+  cursor: pointer;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: gainsboro;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+.search input {
+  background-color: gainsboro;
+  border: none;
+}
+.search input:focus{
+  outline: none;
+}
+.header{
+  display:flex ;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-mode{
+  background-color: black;
+
+
+}
+.dark-mode h1 {
+color: white;  
+}
+.dark-mode label{
+  color: white;  
+  }
+  .dark-mode span{
+    color: white;  
+    }
+.dark-mode .delete-icon{
+  color: white;
+}
+.header input {
+  outline-style: none;
+	width: 32px;
+	height: 32px;
+	border: none;
+  border-radius: 10px;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 970px){
+  .header input{
+    margin-right: 80%;
+    margin-left: 20%;
+  }
+  .header label {
+font-size: small;  }
 }
+
